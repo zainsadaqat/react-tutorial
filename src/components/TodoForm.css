@@ -1,0 +1,55 @@
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.bg-light-blue {
+  margin-top: 1em;
+  padding: 2em;
+  min-height: 200px;
+  width: 50%;
+  background-color: rgb(241, 241, 241);
+  overflow-y: auto;
+}
+
+.todo-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-input {
+  padding: 10px;
+}
+
+.todo-item {
+  padding: 10px 1em;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  width: 100%;
+  background-color: rgb(255, 133, 111);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.todo-item:hover {
+  background-color: rgb(250, 120, 97);
+}
+
+.todo-add-btn {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 10px 1em;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
