@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Input from './TodoInput';
+import './TodoForm.css';
 
 const todoList = [];
 const TodoForm = () => {
@@ -18,23 +19,33 @@ const TodoForm = () => {
   };
   return (
     <>
-      <h2>Todo List</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Todo: </label>
-        <Input
-          type="text"
-          value={todo}
-          onChange={handleChange}
-          isRequired="false"
-          autoComplete="off"
-        />
-        <Input type="submit" value="submit" />
-      </form>
-      <ul>
-        {todoList.map((todo, index) => {
-          return <li key={index}>{todo}</li>;
-        })}
-      </ul>
+      <section className="flex-center">
+        <form onSubmit={handleSubmit}>
+          <article className="form-input">
+            <label className="todo-label">Todo: </label>
+            <Input
+              className="todo-input"
+              type="text"
+              value={todo}
+              onChange={handleChange}
+              isRequired="false"
+              autoComplete="off"
+            />
+          </article>
+          <Input className="todo-add-btn" type="submit" value="Add" />
+        </form>
+        <article className="bg-light-blue">
+          <ul className="">
+            {todoList.map((todo, index) => {
+              return (
+                <li key={index} className="todo-item">
+                  {todo}
+                </li>
+              );
+            })}
+          </ul>
+        </article>
+      </section>
     </>
   );
 };

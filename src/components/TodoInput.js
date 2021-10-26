@@ -1,10 +1,12 @@
 import React from 'react';
 
 const TodoInput = (props) => {
-  const { type, value, onChange, isRequired, autoComplete } = props;
+  const { className, type, value, onChange, isRequired, autoComplete } = props;
   return (
     <>
       <input
+        size="50"
+        className={className}
         type={type}
         value={value}
         onChange={onChange}
@@ -16,6 +18,7 @@ const TodoInput = (props) => {
 };
 
 TodoInput.defaultProps = {
+  className: '',
   type: 'text',
   value: '',
   onChange: () => {},
